@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00B3BA",
+                        secondary: "#EE7633",
+                        accent: "#F9CBCA",
+                        highlight: "#FFE864"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Playfair Display", "serif"],
+                        body: ["Public Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+<body class="font-body bg-white text-slate-800 antialiased">
+<!-- TopNavBar -->
+<nav class="bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-sm border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50 transition-all ease-in-out hover:opacity-80">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-light tracking-widest uppercase text-slate-800 dark:text-slate-100 font-sans tracking-tight">
+                Vanitas Vanitatis
+            </div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#EE7633] transition-colors duration-300 text-sm font-medium" href="#">Treatments</a>
+<a class="text-[#00B3BA] font-medium border-b-2 border-[#00B3BA] pb-1 duration-300 text-sm" href="#">Technology</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#EE7633] transition-colors duration-300 text-sm font-medium" href="#">Location</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#EE7633] transition-colors duration-300 text-sm font-medium" href="#">Contact</a>
+</div>
+<button class="bg-[#EE7633] text-white px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:bg-opacity-90 transition-all transform hover:scale-105">
+                Book Appointment
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="ultra-modern minimalist aesthetic clinic interior with soft natural lighting, white marble surfaces, and subtle teal accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLCTCmjcw04PWeEJ-vG6Fs9wLyDj3Q82D52BUmAZmRtogS3ym7MPO1UVb173LrCb_bOsCsKk7rdRQi7_RD1XXLpGm3eLj_aUTDg26IAdZ6gBMKWNGPk77Y7gvoq0IBHy2oC1jPAHjFqymA39glg7no1hjfh1rEav15-Tg7r_qr7lvB5doFS_FHSubBu0sL75dQ0XptsYpXEBNhVTrEWdviom-Fyzkz_U_zdyx2G2ki7rkdXji_TZUR8hIcTbC--JMEWagWUujjyo"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 py-24">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 bg-[#F9CBCA]/40 text-[#EE7633] text-xs font-bold tracking-widest uppercase rounded-full mb-6">Santander Flagship</span>
+<h1 class="font-headline text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-8">
+                        CENTRO MÉDICO ESTÉTICO DE <span class="text-[#00B3BA]">VANGUARDIA</span>
+</h1>
+<p class="text-lg text-slate-600 leading-relaxed mb-10 text-balance">
+                        Somos un centro médico estético a la vanguardia en los últimos tratamientos médico-estéticos faciales y corporales, con la tecnología más avanzada del mercado para garantizar resultados excepcionales.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#00B3BA] text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:translate-y-[-2px] transition-all">
+                            Explorar Tratamientos
+                        </button>
+<button class="bg-white border-2 border-slate-100 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all">
+                            Conoce al Equipo
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Technology Showcase Grid -->
+<section class="py-24 bg-slate-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl text-slate-900 mb-4">Nuestra Tecnología</h2>
+<div class="h-1.5 w-24 bg-[#FFE864] mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Tech 1: COOLITE EVO -->
+<div class="md:col-span-8 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 relative h-64 md:h-auto">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="professional medical laser device Coolite Evo in a bright clinic setting, clinical precision aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB7rJCu2z3cBNn1EaOXSpvsmyHvJyofLNlh6cyM8PhXDC6EOslJm75VA1Fr38v7FC1LIMF53lxkFGieb--OZpVYYHmowRCZswgBLNqexX_T7GcEnNfnrZaV26ZQPVB8akwzZ9QM_rL7fJLuxu7DB216ANCuBcI1pvU9eC101_vnZ0gTHaB1-aVYsnDxy2vU-AZIwkduJVYhaXTuaHjIFrZkcC5LRgtOF4mY6kbWS1qdnJPbDJlu68x5vcszkkLC0BGniEhhVlJmTA"/>
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<h3 class="font-headline text-3xl mb-4">COOLITE EVO</h3>
+<div class="inline-block self-start px-3 py-1 bg-[#00B3BA]/10 text-[#00B3BA] rounded-md text-xs font-bold mb-6">FIBER OPTIC LASER</div>
+<p class="text-slate-600 mb-6 italic">"The gold standard for permanent hair removal through advanced fiber optic delivery."</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-slate-700">
+<span class="material-symbols-outlined text-[#00B3BA] text-lg">check_circle</span> 
+                                    Effective on all skin types
+                                </li>
+<li class="flex items-center gap-3 text-sm text-slate-700">
+<span class="material-symbols-outlined text-[#00B3BA] text-lg">check_circle</span> 
+                                    Pain-free cooling system
+                                </li>
+</ul>
+<div class="mt-auto">
+<span class="text-[10px] uppercase tracking-widest font-bold text-slate-400 block mb-2">Primary Treatments</span>
+<p class="text-sm font-semibold text-slate-900">Laser Depilation, Skin Rejuvenation</p>
+</div>
+</div>
+</div>
+<!-- Tech 2: ULTRALIGHT SPE -->
+<div class="md:col-span-4 bg-[#00B3BA] rounded-3xl p-10 text-white flex flex-col">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
+<h3 class="font-headline text-2xl mb-4">ULTRALIGHT SPE</h3>
+<p class="text-white/80 text-sm leading-relaxed mb-8">Professional IPL technology designed for pigmentation correction and vascular treatments with pinpoint accuracy.</p>
+<div class="mt-auto p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
+<div class="text-xs font-bold text-highlight mb-2 uppercase tracking-tighter">Technology Focus</div>
+<div class="text-sm">Spectrum Precision Energy (SPE) for targeted cellular response.</div>
+</div>
+</div>
+<!-- Tech 3: PRESOTERAPIA COCOON -->
+<div class="md:col-span-4 bg-white rounded-3xl p-1 p-1 shadow-md border border-slate-100 group overflow-hidden">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern presotherapy boots and equipment in a serene luxury spa environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFSdiibeB2MMQItV4b4Gjs2HhBU01i8hRY55Q8dwGsTF2CcarpNDzhXyHSh4Hfte8BFrJNVTWVP454c8DzXuuMvVUafcpHOMkaiSiMkWe3Xvz1GatYMDy6hGp867Xb56yy4GuGftm1Hp3Y1l2yeCsw3BBhTCuv_kOBgba4W7Gyee2ZYAvNH7C3MHhHkjKGYFz6MbE1hea4nn1deAUjLG8kheSNKTLkiEO7jFMUAQr046MqhuUQ8BY8yyLiV8SB0ljD86xeyBxl2zo"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-bold text-[#EE7633]">COCOON</div>
+</div>
+<div class="px-6 pb-8">
+<h3 class="font-headline text-2xl mb-3">Presoterapia</h3>
+<p class="text-slate-500 text-sm mb-6">Advanced lymphatic drainage system for detoxification and body contouring.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-50 p-3 rounded-xl">
+<div class="text-[10px] font-bold text-slate-400 uppercase">Benefit</div>
+<div class="text-xs font-semibold">Circulation</div>
+</div>
+<div class="bg-slate-50 p-3 rounded-xl">
+<div class="text-[10px] font-bold text-slate-400 uppercase">Usage</div>
+<div class="text-xs font-semibold">Recovery</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tech 4: CELLACTOR SC1 ULTRA -->
+<div class="md:col-span-8 bg-[#F9CBCA]/30 rounded-3xl border-2 border-dashed border-[#F9CBCA] flex flex-col md:flex-row items-stretch">
+<div class="p-10 flex flex-col justify-center flex-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#EE7633] shadow-sm">
+<span class="material-symbols-outlined" data-icon="waves">waves</span>
+</div>
+<h3 class="font-headline text-3xl">CELLACTOR SC1 ULTRA</h3>
+</div>
+<p class="text-slate-700 mb-8 max-w-md">Acoustic Wave Therapy (AWT) using high-energy radial and planar waves for deep tissue remodeling and cellulite reduction.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-white rounded-full text-xs font-bold text-slate-600 shadow-sm">Anti-Cellulite</span>
+<span class="px-4 py-2 bg-white rounded-full text-xs font-bold text-slate-600 shadow-sm">Skin Tightening</span>
+<span class="px-4 py-2 bg-white rounded-full text-xs font-bold text-slate-600 shadow-sm">Body Sculpting</span>
+</div>
+</div>
+<div class="md:w-1/3 min-h-[300px] relative rounded-r-2xl overflow-hidden m-2">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Cellactor SC1 medical device used for acoustic wave therapy in a modern clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBteOpachayjv1l7WWw2WKufnfNCSfcPZ_MwFpWtp-TJYErzF8UKdi3mnuQTUe15kEy12Ng-yk12_kyadffYSaFR615mUSR5UftiTnoRc8RPQNSL2K6C4y_Ila1OUy--rxrg7pZ1pJK_F6vV433QtXmMQacQRu-5RyBIfvwJrKwCT0QaQ2LbxDOsqnodEVToLO_UHk3dzE0RKXl-Ue4QuASdE2n26dQTGmOu2kqz5j20UoQyh5UXq03ywP1wgt7dGGcq4aMtgacFMM"/>
+</div>
+</div>
+<!-- Tech 5: DERMALUX LED -->
+<div class="md:col-span-6 bg-slate-900 text-white rounded-3xl p-12 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl mb-4">DERMALUX LED</h3>
+<p class="text-slate-400 text-lg mb-8">Award-winning phototherapy delivering clinically proven wavelengths for rejuvenated skin.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></div>
+<span class="text-sm font-medium">Red Light: Collagen Stimulation</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+<span class="text-sm font-medium">Blue Light: Acne &amp; Bacteria</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-yellow-200 shadow-[0_0_10px_rgba(254,249,195,0.8)]"></div>
+<span class="text-sm font-medium">Near Infrared: Healing &amp; Pain</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#00B3BA]/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Tech 6: LPG CELLU M6 INTEGRAL -->
+<div class="md:col-span-6 bg-white rounded-3xl p-12 border border-slate-100 flex items-center">
+<div class="grid grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="font-headline text-3xl mb-4">LPG</h3>
+<p class="text-xs text-[#EE7633] font-bold uppercase tracking-widest mb-4">Cellu M6 Integral</p>
+<p class="text-slate-600 text-sm leading-relaxed mb-6">Natural cellular stimulation (Endermologie) for slimming, firming, and resculpting.</p>
+<button class="text-[#00B3BA] font-bold text-sm flex items-center gap-2 group">
+                                    Ver Detalles <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="LPG endermologie machine head with medical professional hand in clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4ss9VluZ80sA1dJBC7TtWA4WrTSDckWgEziRbew7DkNo66vlF8dD1sHDiqjaoUELhXBIE93YyfQkwlI0GOFd4WVgxERuZywO4GY2rKn_JAby9TN7Hev7UYFc0mvXYUJHjEx4LWhelhXNjgW_TGsGzvC_wGpLRxGFud0wfaHBR543PNcLwe4pwEuDcc5aft_5-rAw2cWeOPfka-KRdfFFZdZzQMSzsOQ9teYgWYmEji2_QUud8L3hiK6qLnLWm4IXWmMt5tAJkTA"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-[#F9CBCA]/10">
+<div class="max-w-5xl mx-auto px-6 text-center">
+<h2 class="font-headline text-4xl text-slate-900 mb-8">¿Listo para transformar tu bienestar?</h2>
+<p class="text-slate-600 text-lg mb-12">Agenda una consulta personalizada con nuestros especialistas y descubre el tratamiento ideal para tus necesidades.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-10 py-5 bg-[#EE7633] text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all" href="#">Solicitar Cita Ahora</a>
+<a class="px-10 py-5 bg-white border border-slate-200 text-slate-800 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-3" href="tel:+34000000000">
+<span class="material-symbols-outlined" data-icon="call">call</span> 
+                        Llamar Directamente
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800 flex flex-col items-center gap-4 w-full px-8">
+<div class="max-w-7xl mx-auto w-full flex flex-col items-center gap-8">
+<div class="font-semibold text-slate-900 dark:text-white text-xl tracking-tight">Vanitas Vanitatis</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-xs font-light text-slate-400 hover:text-[#00B3BA] transition-all" href="#">Privacy Policy</a>
+<a class="text-xs font-light text-slate-400 hover:text-[#00B3BA] transition-all" href="#">Legal Notice</a>
+<a class="text-xs font-light text-slate-400 hover:text-[#00B3BA] transition-all" href="#">Cookies</a>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 hover:bg-[#00B3BA] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 hover:bg-[#00B3BA] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+</a>
+</div>
+<p class="text-xs font-light text-slate-400 mt-4">
+                © 2024 Vanitas Vanitatis Santander. Clinical Excellence.
+            </p>
+</div>
+</footer>
+</body></html>
