@@ -6,6 +6,10 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -15,13 +19,18 @@ body {
 }
 
 .clinical-border {
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e7e4de;
 }
 
 .clinical-card {
-  border: 1px solid #e5e7eb;
-  border-top: 4px solid #00b3ba;
-  border-radius: 8px;
+  border: 1px solid #e7e4de;
+  border-radius: 14px;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.clinical-card:hover {
+  border-color: #0e7a80;
+  transform: translateY(-2px);
 }
 
 .header-sticky {
@@ -33,5 +42,5 @@ body {
 input,
 select,
 textarea {
-  border-radius: 8px !important;
+  border-radius: 10px !important;
 }

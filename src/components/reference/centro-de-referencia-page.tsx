@@ -1,36 +1,48 @@
+import Image from "next/image";
+import Link from "next/link";
 import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 function ReferenceHero() {
   return (
     <section className="relative min-h-[870px] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          className="w-full h-full object-cover"
+        <Image
+          className="object-cover"
           alt="Interior de clínica estética de alta tecnología en Santander"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLCTCmjcw04PWeEJ-vG6Fs9wLyDj3Q82D52BUmAZmRtogS3ym7MPO1UVb173LrCb_bOsCsKk7rdRQi7_RD1XXLpGm3eLj_aUTDg26IAdZ6gBMKWNGPk77Y7gvoq0IBHy2oC1jPAHjFqymA39glg7no1hjfh1rEav15-Tg7r_qr7lvB5doFS_FHSubBu0sL75dQ0XptsYpXEBNhVTrEWdviom-Fyzkz_U_zdyx2G2ki7rkdXji_TZUR8hIcTbC--JMEWagWUujjyo"
+          fill
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
         <div className="max-w-2xl">
-          <span className="inline-block py-1 px-3 bg-rose/40 text-energetic-orange text-xs font-bold tracking-widest uppercase rounded-full mb-6">
+          <span className="inline-block py-1 px-3 bg-vanitas-black/5 text-vanitas-black text-xs font-bold tracking-widest uppercase rounded-full mb-6">
             Santander Flagship
           </span>
           <h1 className="serif-title text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-8">
-            CENTRO MEDICO ESTETICO DE <span className="text-primary">VANGUARDIA</span>
+            Centro médico estético de <span className="text-primary">vanguardia</span>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-10">
             Somos un centro médico estético a la vanguardia en los últimos tratamientos médico-estéticos faciales y
             corporales, con la tecnología más avanzada del mercado para garantizar resultados excepcionales.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:-translate-y-[2px] transition-all">
-              Explorar Tratamientos
-            </button>
-            <button className="bg-white border-2 border-slate-100 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all">
-              Conoce al Equipo
-            </button>
+            <Link
+              href="/#tratamientos"
+              className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-vanitas-black transition-all"
+            >
+              Explorar tratamientos
+            </Link>
+            <Link
+              href="/quienes-somos"
+              className="bg-white border border-slate-200 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 transition-all"
+            >
+              Conoce al equipo
+            </Link>
           </div>
         </div>
       </div>
@@ -43,20 +55,22 @@ function TechnologySection() {
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="serif-title text-4xl text-slate-900 mb-4">Nuestra Tecnología</h2>
-          <div className="h-1.5 w-24 bg-lemon mx-auto rounded-full" />
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Equipamiento</p>
+          <h2 className="serif-title text-4xl text-slate-900">Nuestra tecnología</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover"
+                  <Image
+                    className="object-cover"
                     alt="Equipo medico Coolite Evo en una clinica moderna"
                     src="/media/Coolive-evo.png"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
                   />
                 </div>
               </div>
@@ -73,10 +87,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       1200W
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
                       FCD Fibra Optica
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       Crystal TEC
                     </span>
                   </div>
@@ -184,13 +198,15 @@ function TechnologySection() {
 
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img
-                    className="w-full h-full object-contain p-6"
+                  <Image
+                    className="object-contain p-6"
                     alt="Equipo ULTRALIGHT SPE IPL"
                     src="/media/IPL.jpg"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
                   />
                 </div>
               </div>
@@ -205,10 +221,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       1500W
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
                       30+ protocolos
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       TEC -6ºC
                     </span>
                   </div>
@@ -318,10 +334,16 @@ function TechnologySection() {
 
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img className="w-full h-full object-contain p-6" alt="Equipo de presoterapia Cocoon" src="/media/Presoterapia.jpg" />
+                  <Image
+                    className="object-contain p-6"
+                    alt="Equipo de presoterapia Cocoon"
+                    src="/media/Presoterapia.jpg"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
+                  />
                 </div>
               </div>
 
@@ -335,10 +357,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       4 canales
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
                       12 compartimentos
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       20-260 mm Hg
                     </span>
                   </div>
@@ -444,13 +466,15 @@ function TechnologySection() {
 
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img
-                    className="w-full h-full object-contain p-6"
+                  <Image
+                    className="object-contain p-6"
                     alt="Equipo Cellactor SC1 Ultra"
                     src="/media/Cellactor.jpg"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
                   />
                 </div>
               </div>
@@ -465,10 +489,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       MTZ + C-ACTOR
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
-                      Pantalla 15.6"
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
+                      Pantalla 15.6&quot;
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       83.3 kg
                     </span>
                   </div>
@@ -511,7 +535,7 @@ function TechnologySection() {
                       <ul className="list-disc pl-5 space-y-2">
                         <li>Dimensiones sin pantalla táctil (ancho x altura x profundidad): 590 x 1461 x 660 mm.</li>
                         <li>Peso máximo: 83,3 kg.</li>
-                        <li>Pantalla táctil 15,6".</li>
+                        <li>Pantalla táctil 15,6&quot;.</li>
                         <li>Ecografía integrada, Doppler color (opcional).</li>
                         <li>Módulo de cajones «Store Case» (opcional).</li>
                       </ul>
@@ -566,13 +590,15 @@ function TechnologySection() {
 
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img
-                    className="w-full h-full object-contain p-6"
+                  <Image
+                    className="object-contain p-6"
                     alt="Equipo Dermalux LED Phototherapy"
                     src="/media/Dermalux-Triwave-Machine.jpg"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
                   />
                 </div>
               </div>
@@ -587,10 +613,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       415/633/830 nm
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
                       20 protocolos
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       4 LED articulados
                     </span>
                   </div>
@@ -701,13 +727,15 @@ function TechnologySection() {
 
           <article className="md:col-span-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative bg-primary/10 p-10 min-h-[360px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-white/30 to-rose/20" />
+              <div className="relative bg-primary/8 p-10 min-h-[360px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-white/30 to-secondary-turq/20" />
                 <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white shadow-lg border border-slate-100 overflow-hidden">
-                  <img
-                    className="w-full h-full object-contain p-6"
+                  <Image
+                    className="object-contain p-6"
                     alt="Equipo LPG Cellu M6 Integral"
                     src="/media/lpg.jpg"
+                    fill
+                    sizes="(min-width: 1024px) 28rem, 100vw"
                   />
                 </div>
               </div>
@@ -722,10 +750,10 @@ function TechnologySection() {
                     <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold">
                       761 kg
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-rose/40 text-energetic-orange px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-vanitas-black/5 text-vanitas-black px-3 py-1 text-xs font-bold">
                       16 Hz
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-lemon/70 text-slate-900 px-3 py-1 text-xs font-bold">
+                    <span className="inline-flex items-center rounded-full bg-secondary-turq/20 text-primary px-3 py-1 text-xs font-bold">
                       690 mbar
                     </span>
                   </div>
@@ -777,7 +805,7 @@ function TechnologySection() {
                         <li>Caudal: 185 m3/h.</li>
                         <li>Nivel sonoro: 56 dBA.</li>
                         <li>Características eléctricas: 100-240 V / 50-60 Hz / 625-650 W.</li>
-                        <li>Pantalla táctil en color: 10,4".</li>
+                        <li>Pantalla táctil en color: 10,4&quot;.</li>
                         <li>Modo de ahorro de energía: sí.</li>
                         <li>Audio: sí.</li>
                         <li>Puerto USB: sí.</li>
@@ -840,65 +868,30 @@ function TechnologySection() {
 
 function ReferenceCta() {
   return (
-    <section className="py-20 bg-rose/10">
+    <section className="py-20 bg-gradient-to-br from-primary to-secondary-turq">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="serif-title text-4xl text-slate-900 mb-8">¿Listo para transformar tu bienestar?</h2>
-        <p className="text-slate-600 text-lg mb-12">
+        <h2 className="serif-title text-4xl text-white mb-6">¿Listo para transformar tu bienestar?</h2>
+        <p className="text-white/90 text-lg mb-10">
           Agenda una consulta personalizada con nuestros especialistas y descubre el tratamiento ideal para tus
           necesidades.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a className="px-10 py-5 bg-energetic-orange text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all" href="#">
-            Solicitar Cita Ahora
-          </a>
-          <a
-            className="px-10 py-5 bg-white border border-slate-200 text-slate-800 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-3"
-            href="tel:+34000000000"
+          <Link
+            className="px-9 py-4 bg-white text-primary rounded-full font-semibold hover:bg-vanitas-black hover:text-white transition-all"
+            href="/#contacto"
           >
-            <span className="material-symbols-outlined">call</span>
-            Llamar Directamente
+            Solicitar cita ahora
+          </Link>
+          <a
+            className="px-9 py-4 bg-transparent border border-white/40 text-white rounded-full font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+            href="tel:+34670216216"
+          >
+            <span className="material-symbols-outlined text-lg">call</span>
+            Llamar directamente
           </a>
         </div>
       </div>
     </section>
-  );
-}
-
-function ReferenceFooter() {
-  return (
-    <footer className="bg-slate-50 w-full py-12 border-t border-slate-200 flex flex-col items-center gap-4 px-8">
-      <div className="max-w-7xl mx-auto w-full flex flex-col items-center gap-8">
-        <div className="font-semibold text-slate-900 text-xl tracking-tight">Vanitas Vanitatis</div>
-        <div className="flex flex-wrap justify-center gap-8">
-          <a className="text-xs font-light text-slate-400 hover:text-primary transition-all" href="#">
-            Privacy Policy
-          </a>
-          <a className="text-xs font-light text-slate-400 hover:text-primary transition-all" href="#">
-            Legal Notice
-          </a>
-          <a className="text-xs font-light text-slate-400 hover:text-primary transition-all" href="#">
-            Cookies
-          </a>
-        </div>
-        <div className="flex gap-6">
-          <a
-            className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined text-sm">share</span>
-          </a>
-          <a
-            className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined text-sm">location_on</span>
-          </a>
-        </div>
-        <p className="text-xs font-light text-slate-400 mt-4">
-          © 2024 Vanitas Vanitatis Santander. Clinical Excellence.
-        </p>
-      </div>
-    </footer>
   );
 }
 
@@ -909,7 +902,7 @@ export function CentroDeReferenciaPage() {
       <ReferenceHero />
       <TechnologySection />
       <ReferenceCta />
-      <ReferenceFooter />
+      <SiteFooter />
     </main>
   );
 }

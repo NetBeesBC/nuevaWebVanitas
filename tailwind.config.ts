@@ -11,18 +11,15 @@ const config: Config = {
       colors: {
         primary: "#00B3BA",
         "secondary-turq": "#53B4BA",
-        lemon: "#FFE864",
-        rose: "#F9CBCA",
-        "energetic-orange": "#EE7633",
-        "background-light": "#F7F7F7",
-        "vanitas-black": "#1A1A1A",
+        "background-light": "#F1F0EA",
+        "vanitas-black": "#000000",
       },
       fontFamily: {
         display: ["var(--font-inter)", "sans-serif"],
         serif: ["var(--font-playfair)", "serif"],
       },
       borderRadius: {
-        clinical: "8px",
+        clinical: "14px",
       },
       borderWidth: {
         3: "3px",
